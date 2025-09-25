@@ -68,6 +68,14 @@ class App {
     const { MONGO_CONNECTION_URL } = process.env;
     mongoose.set('strictQuery', false);
     mongoose.connect(MONGO_CONNECTION_URL);
+    
+    mongoose.connection.on('error', (error) => {
+      console.error('MongoDB connection error:', error);
+    });
+
+    mongoose.connection.on('connected', () => {
+      console.log('MongoDB connected successfully');
+    });
   }
 }
 
