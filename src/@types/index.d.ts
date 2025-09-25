@@ -12,5 +12,3 @@ declare global {
     password: string;
   }
 }
-
-export {};
