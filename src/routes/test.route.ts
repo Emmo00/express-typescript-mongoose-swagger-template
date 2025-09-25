@@ -1,9 +1,8 @@
-import { Router } from 'express';
-import TestController from '../controllers/test.controller';
-import Route from '../interfaces/routes.interface';
+import { Router } from "express";
+import TestController from "../controllers/test.controller";
 
 class TestRoute implements Route {
-  public path = '/test';
+  public path = "/test";
   public router = Router();
   public testController = new TestController();
 
@@ -12,7 +11,7 @@ class TestRoute implements Route {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}/das`, this.testController.test);
+    this.router.get("/das", this.testController.test);
   }
 }
 
