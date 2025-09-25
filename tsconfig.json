@@ -6,12 +6,12 @@
     "baseUrl": "./src",
     "alwaysStrict": true,
     "noImplicitAny": true,
-    "resolveJsonModule":true,
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": false,
     "moduleResolution": "node",
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types", "./src/@types"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
